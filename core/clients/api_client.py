@@ -20,7 +20,7 @@ class ApiClient:
         if environment == Environment.TEST:
             return os.getenv('TEST_BASE_URL')
         elif environment == Environment.PRODUCTION:
-            return os.getenv('PRODUCTION_BASE_URL')
+            return os.getenv('PROD_BASE_URL')
         else:
             raise ValueError(f'Unsupported environment: {environment}')
 
