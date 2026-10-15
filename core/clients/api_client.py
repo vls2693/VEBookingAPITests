@@ -19,7 +19,7 @@ class ApiClient:
     def get_base_url(self, environment: Environment) -> str:
         if environment == Environment.TEST:
             return os.getenv('TEST_BASE_URL')
-        elif environment == Environment.PRODUCTION:
+        elif environment == Environment.PROD:
             return os.getenv('PROD_BASE_URL')
         else:
             raise ValueError(f'Unsupported environment: {environment}')
